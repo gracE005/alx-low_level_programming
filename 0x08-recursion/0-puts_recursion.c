@@ -1,25 +1,21 @@
-#include "main.h"
-#include <stdlib.h>
-
-/**
- * create_array - create array of size size and assign char c
- * @size: size of array
- * @c: char to assign
- * Description: creat array of size size and assign char c
- * Return: pointer to array, NULL if fail
+/*
+ * File: 0-puts_recursion.c
+ * Auth: sa
  */
 
-char *create_array(unsigned int size, char c)
+#include "main.h"
 
+/**
+ * _puts_recursion - Prints a string, followed by a new line.
+ * @s: The string to be printed.
+ */
+void _puts_recursion(char *s)
 {
-
-char *str;
-
-unsigned int i;
-str = malloc(sizeof(char) * size);
-if (size == 0 || str == NULL)
-return (NULL);
-for (i = 0; i < size; i++)
-str[i] = c;
-return (str);
+if (*s)
+{
+_putchar(*s);
+_puts_recursion(s + 1);
+}
+else
+_putchar('\n');
 }
