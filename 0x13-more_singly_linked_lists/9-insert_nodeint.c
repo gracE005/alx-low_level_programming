@@ -20,7 +20,6 @@ return (NULL);
 
 new->n = n;
 new->next = NULL;
-
 if (idx == 0)
 {
 new->next = *head;
@@ -31,7 +30,7 @@ return (new);
 for (i = 0; temp && i < idx; i++)
 {
 if (i == idx - 1)
-{        
+{
 new->next = temp->next;
 temp->next = new;
 return (new);
@@ -39,5 +38,6 @@ return (new);
 else
 temp = temp->next;
 }
+
 return (NULL);
 }
